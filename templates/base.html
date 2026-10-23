@@ -1,195 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Adv. Zafar Iqbal — Tax Consultant & Advocate{% endblock %}</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: #222; background: #fff; }
-
-        /* ── NAVBAR ── */
-        .navbar {
-            background: #0a1f3c;
-            padding: 0 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
-            height: 68px;
-        }
-        .navbar-brand {
-            display: flex;
-            flex-direction: column;
-            text-decoration: none;
-        }
-        .navbar-brand .name {
-            color: #ffffff;
-            font-size: 1.1rem;
-            font-weight: 700;
-            letter-spacing: 0.3px;
-        }
-        .navbar-brand .tagline {
-            color: #7eb3e8;
-            font-size: 0.72rem;
-            font-weight: 400;
-            letter-spacing: 0.5px;
-        }
-        .navbar-links {
-            display: flex;
-            gap: 6px;
-            list-style: none;
-        }
-        .navbar-links a {
-            color: #ccdff5;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 6px;
-            transition: all 0.2s ease;
-            letter-spacing: 0.2px;
-        }
-        .navbar-links a:hover {
-            background: #1a3f6f;
-            color: #ffffff;
-        }
-        .navbar-links a.active {
-            background: #1e5ca8;
-            color: #ffffff;
-        }
-
-        /* ── FOOTER ── */
-        .footer {
-            background: #0a1f3c;
-            color: #ccdff5;
-            padding: 50px 40px 25px;
-            margin-top: 60px;
-        }
-        .footer-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            max-width: 1100px;
-            margin: 0 auto 35px;
-        }
-        .footer-col { flex: 1; min-width: 200px; }
-        .footer-col h3 {
-            color: #ffffff;
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #1e5ca8;
-            display: inline-block;
-        }
-        .footer-col p, .footer-col a {
-            color: #a8c5e5;
-            font-size: 0.88rem;
-            line-height: 1.9;
-            text-decoration: none;
-            display: block;
-        }
-        .footer-col a:hover { color: #ffffff; }
-        .footer-bottom {
-            text-align: center;
-            border-top: 1px solid #1a3a5c;
-            padding-top: 20px;
-            color: #6a90b5;
-            font-size: 0.82rem;
-        }
-        .footer-bottom span { color: #e05c5c; }
-
-        /* ── FLASH MESSAGES ── */
-        .flash-container { max-width: 1100px; margin: 20px auto; padding: 0 20px; }
-        .flash-success {
-            background: #d4edda; color: #155724;
-            padding: 14px 20px; border-radius: 8px;
-            border-left: 4px solid #28a745; font-size: 0.95rem;
-        }
-        .flash-danger {
-            background: #f8d7da; color: #721c24;
-            padding: 14px 20px; border-radius: 8px;
-            border-left: 4px solid #dc3545; font-size: 0.95rem;
-        }
-
-        /* ── RESPONSIVE ── */
-        @media (max-width: 768px) {
-            .navbar { padding: 0 20px; flex-wrap: wrap; height: auto; padding: 15px 20px; }
-            .navbar-links { gap: 2px; flex-wrap: wrap; }
-            .navbar-links a { font-size: 0.82rem; padding: 6px 10px; }
-            .footer { padding: 40px 20px 20px; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Adv. Zafar Iqbal — Tax Consultant & Advocate, Ranchi{% endblock %}</title>
+  <meta name="description" content="{% block description %}Adv. Zafar Iqbal, B.Com LLB — Income Tax, GST, tax consultancy and legal advocacy in Ranchi, Jharkhand.{% endblock %}">
+  <meta name="theme-color" content="#14213d">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ self.title() }}">
+  <meta property="og:description" content="{{ self.description() }}">
+  <meta property="og:locale" content="en_IN">
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">
+  <script>document.documentElement.classList.add('js')</script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LegalService","name":"Adv. Zafar Iqbal — Tax Consultant & Advocate",
+   "telephone":"+919835167520","email":"adv.zafariqbalandtaxes@gmail.com",
+   "address":{"@type":"PostalAddress","streetAddress":"A/5 Iqra Complex, Main Road","addressLocality":"Ranchi","addressRegion":"Jharkhand","postalCode":"834001","addressCountry":"IN"},
+   "openingHours":"Mo-Sa 10:00-18:00","areaServed":"Jharkhand"}
+  </script>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <a href="/" class="navbar-brand">
-        <span class="name">Adv. Zafar Iqbal</span>
-        <span class="tagline">Tax Consultant & Advocate, Ranchi</span>
-    </a>
-    <ul class="navbar-links">
-        <li><a href="/" class="{{ 'active' if request.path == '/' }}">Home</a></li>
-        <li><a href="/about" class="{{ 'active' if request.path == '/about' }}">About</a></li>
-        <li><a href="/services" class="{{ 'active' if request.path == '/services' }}">Services</a></li>
-        <li><a href="/contact" class="{{ 'active' if request.path == '/contact' }}">Contact</a></li>
-    </ul>
-</nav>
+<!-- Bar Council of India disclaimer (shown once per visitor, only when JS is available) -->
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title" hidden>
+  <div class="gate-box">
+    <span class="eyebrow">Disclaimer</span>
+    <h2 id="gate-title">Before you proceed</h2>
+    <p>The Bar Council of India does not permit advertisement or solicitation by advocates in any form or manner. By accessing this website you acknowledge that you are seeking information relating to Adv. Zafar Iqbal of your own accord, and that there has been no advertisement, personal communication, solicitation, invitation or inducement of any sort from him or on his behalf.</p>
+    <p>The content of this website is for information only and must not be construed as legal advice. Adv. Zafar Iqbal is not liable for any action taken in reliance on it.</p>
+    <button class="btn btn-ink" id="gate-accept" type="button">I understand and accept</button>
+  </div>
+</div>
 
-<!-- FLASH MESSAGES -->
+<div class="topbar">
+  <div class="wrap">
+    <span class="hide-sm">Mon – Sat · 10:00 AM – 6:00 PM</span>
+    <span><a href="tel:+919835167520">+91 98351 67520</a> &nbsp;·&nbsp; <a href="mailto:adv.zafariqbalandtaxes@gmail.com">adv.zafariqbalandtaxes@gmail.com</a></span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="{{ url_for('index') }}" aria-label="Adv. Zafar Iqbal — home">
+      <span class="mono" aria-hidden="true">ZI</span>
+      <span><b>Adv. Zafar Iqbal</b><small>Tax Consultant &amp; Advocate</small></span>
+    </a>
+    <button class="menu-btn" type="button" aria-label="Menu" aria-controls="nav" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="{{ url_for('index') }}" {% if request.endpoint == 'index' %}aria-current="page"{% endif %}>Home</a>
+      <a href="{{ url_for('about') }}" {% if request.endpoint == 'about' %}aria-current="page"{% endif %}>About</a>
+      <a href="{{ url_for('services') }}" {% if request.endpoint == 'services' %}aria-current="page"{% endif %}>Practice Areas</a>
+      <a href="{{ url_for('contact') }}" class="btn btn-brass">Contact</a>
+    </nav>
+  </div>
+</header>
+
 {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-        <div class="flash-container">
-            {% for category, message in messages %}
-                <div class="flash-{{ category }}">{{ message }}</div>
-            {% endfor %}
-        </div>
-    {% endif %}
+  {% for category, message in messages %}
+    <div class="flash {{ category }}" role="status"><div class="wrap">{{ message }}</div></div>
+  {% endfor %}
 {% endwith %}
 
-<!-- PAGE CONTENT -->
-{% block content %}{% endblock %}
+<main>
+  {% block content %}{% endblock %}
+</main>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="footer-grid">
-        <div class="footer-col">
-            <h3>Adv. Zafar Iqbal</h3>
-            <p>Qualified Tax Consultant & Advocate with 15+ years of experience in Ranchi, Jharkhand.</p>
-            <p style="margin-top: 10px;">B.Com, LLB — Chotanagpur Law College</p>
-        </div>
-        <div class="footer-col">
-            <h3>Quick Links</h3>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/services">Services</a>
-            <a href="/contact">Contact</a>
-        </div>
-        <div class="footer-col">
-            <h3>Services</h3>
-            <a href="/services">Income Tax Filing</a>
-            <a href="/services">GST Registration & Returns</a>
-            <a href="/services">Legal Consultation</a>
-            <a href="/services">Business Registration</a>
-        </div>
-        <div class="footer-col">
-            <h3>Contact</h3>
-            <p>📍 A/5 Iqra Complex, Main Road<br>Ranchi – 834001, Jharkhand</p>
-            <a href="tel:+919835167520" style="margin-top:8px;">📞 +91 98351 67520</a>
-            <a href="https://wa.me/919835167520" target="_blank">💬 WhatsApp</a>
-            <a href="mailto:adv.zafariqbalandtaxes@gmail.com">✉️ Email Us</a>
-        </div>
+<a class="fab" href="https://wa.me/919835167520" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.4.7 4.7 1.9 6.600L3 29l7.100-2.100c1.800 1 3.800 1.500 5.900 1.500 7 0 12.700-5.600 12.700-12.500S23 3 16 3zm0 22.800c-1.900 0-3.700-.5-5.300-1.500l-.4-.2-4.200 1.200 1.200-4-.3-.4a10 10 0 0 1-1.600-5.400C5.400 9.900 10.200 5.300 16 5.300s10.600 4.600 10.600 10.200S21.800 25.800 16 25.800zm5.800-7.500c-.3-.2-1.900-.9-2.200-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100a8.600 8.600 0 0 1-4.300-3.700c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.3-.6-.5-.5-.7-.5h-.6a1.200 1.200 0 0 0-.9.400 3.700 3.700 0 0 0-1.100 2.700c0 1.600 1.200 3.200 1.300 3.400s2.300 3.500 5.600 4.900c2 .8 2.800.9 3.800.7.600-.1 1.900-.8 2.100-1.500s.3-1.400.2-1.500-.3-.2-.6-.4z"/></svg>
+</a>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="{{ url_for('index') }}" style="padding:0;margin-bottom:16px">
+          <span class="mono" aria-hidden="true">ZI</span>
+          <span><b>Adv. Zafar Iqbal</b><small>Tax Consultant &amp; Advocate</small></span>
+        </a>
+        <p>B.Com, LLB — Chotanagpur Law College.<br>Income Tax, GST and legal practice in Ranchi, Jharkhand.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('services') }}">Practice Areas</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+      </div>
+      <div>
+        <h2>Practice</h2>
+        <a href="{{ url_for('services') }}#income-tax">Income Tax</a>
+        <a href="{{ url_for('services') }}#gst">GST</a>
+        <a href="{{ url_for('services') }}#advocacy">Legal Advocacy</a>
+        <a href="{{ url_for('services') }}#business">Business Registration</a>
+      </div>
+      <div>
+        <h2>Office</h2>
+        <p>A/5 Iqra Complex, Main Road<br>Ranchi – 834001, Jharkhand</p>
+        <a href="tel:+919835167520">+91 98351 67520</a>
+        <a href="mailto:adv.zafariqbalandtaxes@gmail.com" style="word-break:break-all">adv.zafariqbalandtaxes@gmail.com</a>
+      </div>
     </div>
-    <div class="footer-bottom">
-        <p>© 2025 Adv. Zafar Iqbal — Tax Consultant & Advocate, Ranchi. All rights reserved. Made with <span>♥</span> in Jharkhand.</p>
+    <div class="foot-bottom">
+      <span>© {{ current_year }} Adv. Zafar Iqbal. All rights reserved.</span>
+      <span>Information on this website is not legal advice and is not an advertisement or solicitation.</span>
     </div>
+  </div>
 </footer>
 
+<script src="{{ url_for('static', filename='js/site.js') }}" defer></script>
 </body>
 </html>

@@ -1,158 +1,80 @@
 {% extends "base.html" %}
-
 {% block title %}Adv. Zafar Iqbal — Tax Consultant & Advocate, Ranchi{% endblock %}
-
 {% block content %}
 
-<!-- HERO SECTION -->
-<section style="background: linear-gradient(135deg, #0a1f3c 0%, #1e5ca8 60%, #2d7dd2 100%); color: white; padding: 90px 20px; text-align: center; position: relative; overflow: hidden;">
-    <!-- Background subtle pattern -->
-    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.05; background-image: repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%); background-size: 20px 20px;"></div>
-
-    <div style="max-width: 780px; margin: 0 auto; position: relative;">
-        <div style="display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 30px; padding: 6px 20px; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 25px; text-transform: uppercase;">
-            ⚖️ Trusted Since 15+ Years
-        </div>
-        <h1 style="font-size: 3rem; font-weight: 700; line-height: 1.2; margin-bottom: 20px; letter-spacing: -0.5px;">
-            Expert Tax & Legal<br>Consultancy in Ranchi
-        </h1>
-        <p style="font-size: 1.15rem; opacity: 0.88; line-height: 1.8; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
-            Adv. Zafar Iqbal provides professional Income Tax, GST, and Legal services to individuals and businesses across Jharkhand.
-        </p>
-        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-            <a href="/contact" style="background: #ffffff; color: #0a1f3c; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: all 0.2s;">
-                Book a Consultation →
-            </a>
-            <a href="/services" style="background: transparent; color: #ffffff; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; border: 2px solid rgba(255,255,255,0.5);">
-                View Services
-            </a>
-        </div>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" style="color:var(--brass-l)">Ranchi · Jharkhand</span>
+      <h1>Tax &amp; legal counsel, <em>with clarity.</em></h1>
+      <p class="lead">Adv. Zafar Iqbal, B.Com, LLB, practises in Income Tax, GST and advocacy — with over fifteen years of experience advising individuals and businesses across Jharkhand.</p>
+      <div class="actions">
+        <a class="btn btn-brass" href="{{ url_for('contact') }}">Get in touch</a>
+        <a class="btn btn-ghost" href="{{ url_for('services') }}">Practice areas</a>
+      </div>
     </div>
+    <aside class="hero-card" aria-label="Practice areas">
+      <h2>Areas of practice</h2>
+      <ul>
+        <li>Income Tax</li>
+        <li>GST</li>
+        <li>Tax Consultancy</li>
+        <li>Legal Advocacy</li>
+      </ul>
+    </aside>
+  </div>
 </section>
 
-<!-- STATS BAR -->
-<section style="background: #f0f6ff; border-bottom: 1px solid #dce8f7; padding: 30px 20px;">
-    <div style="max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; text-align: center;">
-        <div style="flex: 1; min-width: 160px; padding: 10px 20px; border-right: 1px solid #c5d8ef;">
-            <div style="font-size: 1.8rem; font-weight: 700; color: #1e5ca8;">15+</div>
-            <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">Years Experience</div>
-        </div>
-        <div style="flex: 1; min-width: 160px; padding: 10px 20px; border-right: 1px solid #c5d8ef;">
-            <div style="font-size: 1.8rem; font-weight: 700; color: #1e5ca8;">500+</div>
-            <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">Happy Clients</div>
-        </div>
-        <div style="flex: 1; min-width: 160px; padding: 10px 20px; border-right: 1px solid #c5d8ef;">
-            <div style="font-size: 1.8rem; font-weight: 700; color: #1e5ca8;">100%</div>
-            <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">Compliance Rate</div>
-        </div>
-        <div style="flex: 1; min-width: 160px; padding: 10px 20px;">
-            <div style="font-size: 1.8rem; font-weight: 700; color: #1e5ca8;">4</div>
-            <div style="font-size: 0.85rem; color: #555; margin-top: 4px;">Core Services</div>
-        </div>
+<div class="facts">
+  <div class="fact"><b>15+</b><span>Years in practice</span></div>
+  <div class="fact"><b>B.Com · LLB</b><span>Qualifications</span></div>
+  <div class="fact"><b>Ranchi</b><span>Main Road office</span></div>
+  <div class="fact"><b>Mon – Sat</b><span>10 AM – 6 PM</span></div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Practice Areas</span>
+      <h2>Tax and legal work, under one roof</h2>
+      <div class="rule"></div>
+      <p class="lead">From routine filings to appeals before tribunals and courts.</p>
     </div>
+    <div class="grid">
+      <article class="card reveal"><span class="num">01</span><h3>Income Tax</h3><p>Return filing for individuals, professionals and businesses, tax planning, and replies to departmental notices.</p></article>
+      <article class="card reveal"><span class="num">02</span><h3>GST</h3><p>Registration, periodic returns, input tax credit reconciliation and responses to GST notices.</p></article>
+      <article class="card reveal"><span class="num">03</span><h3>Tax Consultancy</h3><p>Planning, TDS compliance and advance tax guidance within the framework of Indian tax law.</p></article>
+      <article class="card reveal"><span class="num">04</span><h3>Legal Advocacy</h3><p>Representation before appellate authorities, tribunals and civil courts, and legal drafting.</p></article>
+    </div>
+    <p class="center reveal" style="margin-top:44px"><a class="btn btn-line" href="{{ url_for('services') }}">View all practice areas →</a></p>
+  </div>
 </section>
 
-<!-- SERVICES CARDS -->
-<section style="padding: 70px 20px; max-width: 1100px; margin: 0 auto;">
-    <div style="text-align: center; margin-bottom: 50px;">
-        <p style="color: #1e5ca8; font-weight: 600; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px;">What We Offer</p>
-        <h2 style="font-size: 2.1rem; color: #0a1f3c; font-weight: 700;">Our Core Services</h2>
+<section class="section dark">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Approach</span>
+      <h2>How matters are handled</h2>
+      <div class="rule"></div>
     </div>
-
-    <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center;">
-
-        <div style="flex: 1; min-width: 230px; max-width: 260px; background: #fff; border: 1px solid #e0eaf5; border-radius: 14px; padding: 30px 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); transition: all 0.2s;">
-            <div style="font-size: 2.2rem; margin-bottom: 15px;">📊</div>
-            <h3 style="color: #0a1f3c; font-size: 1.05rem; margin-bottom: 10px;">Income Tax</h3>
-            <p style="color: #666; font-size: 0.9rem; line-height: 1.7;">ITR filing, tax planning, notices & assessments for individuals and businesses.</p>
-            <a href="/services" style="display: inline-block; margin-top: 18px; color: #1e5ca8; font-size: 0.88rem; font-weight: 600; text-decoration: none;">Learn more →</a>
-        </div>
-
-        <div style="flex: 1; min-width: 230px; max-width: 260px; background: #fff; border: 1px solid #e0eaf5; border-radius: 14px; padding: 30px 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-            <div style="font-size: 2.2rem; margin-bottom: 15px;">🧾</div>
-            <h3 style="color: #0a1f3c; font-size: 1.05rem; margin-bottom: 10px;">GST Services</h3>
-            <p style="color: #666; font-size: 0.9rem; line-height: 1.7;">GST registration, monthly/quarterly returns, audits and compliance management.</p>
-            <a href="/services" style="display: inline-block; margin-top: 18px; color: #1e5ca8; font-size: 0.88rem; font-weight: 600; text-decoration: none;">Learn more →</a>
-        </div>
-
-        <div style="flex: 1; min-width: 230px; max-width: 260px; background: #fff; border: 1px solid #e0eaf5; border-radius: 14px; padding: 30px 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-            <div style="font-size: 2.2rem; margin-bottom: 15px;">⚖️</div>
-            <h3 style="color: #0a1f3c; font-size: 1.05rem; margin-bottom: 10px;">Legal Services</h3>
-            <p style="color: #666; font-size: 0.9rem; line-height: 1.7;">Legal consultation, drafting agreements, court representation and advocacy.</p>
-            <a href="/services" style="display: inline-block; margin-top: 18px; color: #1e5ca8; font-size: 0.88rem; font-weight: 600; text-decoration: none;">Learn more →</a>
-        </div>
-
-        <div style="flex: 1; min-width: 230px; max-width: 260px; background: #fff; border: 1px solid #e0eaf5; border-radius: 14px; padding: 30px 25px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-            <div style="font-size: 2.2rem; margin-bottom: 15px;">🏢</div>
-            <h3 style="color: #0a1f3c; font-size: 1.05rem; margin-bottom: 10px;">Business Setup</h3>
-            <p style="color: #666; font-size: 0.9rem; line-height: 1.7;">Company registration, partnership deeds, trade licenses and compliance setup.</p>
-            <a href="/services" style="display: inline-block; margin-top: 18px; color: #1e5ca8; font-size: 0.88rem; font-weight: 600; text-decoration: none;">Learn more →</a>
-        </div>
-
+    <div class="grid">
+      <div class="card reveal"><h3>Individual attention</h3><p>Every matter is reviewed on its own facts — no template advice.</p></div>
+      <div class="card reveal"><h3>Deadline discipline</h3><p>Statutory due dates are tracked so that filings are made on time.</p></div>
+      <div class="card reveal"><h3>Confidentiality</h3><p>Financial and legal information shared with the office is kept private.</p></div>
+      <div class="card reveal"><h3>Local knowledge</h3><p>Familiarity with Jharkhand's offices, forums and local practice.</p></div>
     </div>
+  </div>
 </section>
 
-<!-- WHY CHOOSE US -->
-<section style="background: #f7faff; padding: 70px 20px;">
-    <div style="max-width: 1100px; margin: 0 auto;">
-        <div style="text-align: center; margin-bottom: 50px;">
-            <p style="color: #1e5ca8; font-weight: 600; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px;">Why Us</p>
-            <h2 style="font-size: 2.1rem; color: #0a1f3c; font-weight: 700;">Why Clients Trust Us</h2>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-
-            <div style="flex: 1; min-width: 220px; display: flex; gap: 16px; align-items: flex-start; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
-                <div style="font-size: 1.8rem; min-width: 40px;">🎯</div>
-                <div>
-                    <h4 style="color: #0a1f3c; margin-bottom: 6px;">Expert Knowledge</h4>
-                    <p style="color: #666; font-size: 0.88rem; line-height: 1.7;">Deep expertise in Indian tax law, GST regulations, and Jharkhand's legal system.</p>
-                </div>
-            </div>
-
-            <div style="flex: 1; min-width: 220px; display: flex; gap: 16px; align-items: flex-start; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
-                <div style="font-size: 1.8rem; min-width: 40px;">🔒</div>
-                <div>
-                    <h4 style="color: #0a1f3c; margin-bottom: 6px;">100% Confidential</h4>
-                    <p style="color: #666; font-size: 0.88rem; line-height: 1.7;">Your financial and legal information is always kept strictly private and secure.</p>
-                </div>
-            </div>
-
-            <div style="flex: 1; min-width: 220px; display: flex; gap: 16px; align-items: flex-start; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
-                <div style="font-size: 1.8rem; min-width: 40px;">⚡</div>
-                <div>
-                    <h4 style="color: #0a1f3c; margin-bottom: 6px;">Fast Turnaround</h4>
-                    <p style="color: #666; font-size: 0.88rem; line-height: 1.7;">Timely filing, quick responses, and no missed deadlines — ever.</p>
-                </div>
-            </div>
-
-            <div style="flex: 1; min-width: 220px; display: flex; gap: 16px; align-items: flex-start; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
-                <div style="font-size: 1.8rem; min-width: 40px;">💬</div>
-                <div>
-                    <h4 style="color: #0a1f3c; margin-bottom: 6px;">Always Reachable</h4>
-                    <p style="color: #666; font-size: 0.88rem; line-height: 1.7;">Available on call and WhatsApp for quick queries and ongoing support.</p>
-                </div>
-            </div>
-
-        </div>
+<section class="cta">
+  <div class="wrap reveal">
+    <h2>Have a tax or legal matter?</h2>
+    <p>Write to the office or call during working hours, Monday to Saturday.</p>
+    <div class="actions">
+      <a class="btn btn-brass" href="{{ url_for('contact') }}">Contact the office</a>
+      <a class="btn btn-ghost" href="tel:+919835167520">Call +91 98351 67520</a>
     </div>
-</section>
-
-<!-- CTA SECTION -->
-<section style="background: linear-gradient(135deg, #0a1f3c, #1e5ca8); color: white; padding: 70px 20px; text-align: center;">
-    <div style="max-width: 650px; margin: 0 auto;">
-        <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 15px;">Ready to Get Started?</h2>
-        <p style="opacity: 0.88; font-size: 1.05rem; line-height: 1.8; margin-bottom: 35px;">
-            Contact us today for a free initial consultation. We'll help you navigate taxes and legal matters with confidence.
-        </p>
-        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-            <a href="/contact" style="background: white; color: #0a1f3c; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem;">
-                Contact Us →
-            </a>
-            <a href="https://wa.me/919835167520" target="_blank" style="background: #25D366; color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem;">
-                💬 WhatsApp Us
-            </a>
-        </div>
-    </div>
+  </div>
 </section>
 
 {% endblock %}

@@ -1,122 +1,64 @@
 {% extends "base.html" %}
-
 {% block title %}About — Adv. Zafar Iqbal{% endblock %}
-
+{% block description %}Adv. Zafar Iqbal, B.Com LLB (Chotanagpur Law College), practising Income Tax, GST and advocacy in Ranchi for over 15 years.{% endblock %}
 {% block content %}
 
-<!-- Page Header -->
-<section style="background: linear-gradient(135deg, #0a1f3c 0%, #1e5ca8 100%); color: white; padding: 70px 20px; text-align: center;">
-    <div style="max-width: 700px; margin: 0 auto;">
-        <p style="color: #7eb3e8; font-size: 0.85rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px;">Who We Are</p>
-        <h1 style="font-size: 2.6rem; font-weight: 700; margin-bottom: 14px;">About Adv. Zafar Iqbal</h1>
-        <p style="font-size: 1.05rem; opacity: 0.85; line-height: 1.8;">Trusted Tax Consultant & Advocate serving Ranchi for over 15 years</p>
-    </div>
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">About</span>
+    <h1>Adv. Zafar Iqbal</h1>
+    <p>Tax Consultant &amp; Advocate, Ranchi.</p>
+  </div>
 </section>
 
-<!-- Profile Section -->
-<section style="padding: 70px 20px; max-width: 1100px; margin: 0 auto;">
-    <div style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center;">
-
-        <div style="flex: 1; min-width: 250px; text-align: center;">
-            <div style="width: 210px; height: 210px; border-radius: 50%; background: linear-gradient(135deg, #e8f0fe, #c5d8f7); margin: 0 auto; display: flex; align-items: center; justify-content: center; border: 5px solid #1e5ca8; box-shadow: 0 8px 30px rgba(30,92,168,0.2);">
-                <span style="font-size: 85px;">👨‍💼</span>
-            </div>
-            <h2 style="margin-top: 22px; color: #0a1f3c; font-size: 1.4rem;">Adv. Zafar Iqbal</h2>
-            <p style="color: #1e5ca8; font-weight: 600; margin-top: 5px;">Tax Consultant & Advocate</p>
-            <p style="color: #777; font-size: 0.88rem; margin-top: 5px;">B.Com, LLB — Chotanagpur Law College</p>
-            <div style="margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-                <a href="tel:+919835167520" style="background: #0a1f3c; color: white; padding: 9px 20px; border-radius: 7px; text-decoration: none; font-size: 0.88rem; font-weight: 600;">📞 Call Now</a>
-                <a href="https://wa.me/919835167520" target="_blank" style="background: #25D366; color: white; padding: 9px 20px; border-radius: 7px; text-decoration: none; font-size: 0.88rem; font-weight: 600;">💬 WhatsApp</a>
-            </div>
-        </div>
-
-        <div style="flex: 2; min-width: 280px;">
-            <p style="color: #1e5ca8; font-weight: 600; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px;">Background</p>
-            <h2 style="color: #0a1f3c; font-size: 1.8rem; font-weight: 700; margin-bottom: 20px;">A Legacy of Trust & Expertise</h2>
-            <p style="color: #555; line-height: 1.9; margin-bottom: 16px; font-size: 0.97rem;">
-                Adv. Zafar Iqbal is a qualified Tax Consultant and Advocate based in Ranchi, Jharkhand, with over <strong>15+ years of experience</strong> in Income Tax, GST, and legal advisory services.
-            </p>
-            <p style="color: #555; line-height: 1.9; margin-bottom: 16px; font-size: 0.97rem;">
-                Holding a <strong>B.Com and LLB</strong> from Chotanagpur Law College, he combines deep financial knowledge with legal expertise to provide comprehensive solutions for individuals and businesses across Jharkhand.
-            </p>
-            <p style="color: #555; line-height: 1.9; font-size: 0.97rem;">
-                His commitment to accuracy, transparency, and client satisfaction has made him one of the most trusted names in tax and legal consultancy in Ranchi.
-            </p>
-        </div>
-
+<section class="section">
+  <div class="wrap split">
+    <div class="reveal">
+      <!-- To use a real photo, add static/img/portrait.jpg — it covers the monogram automatically. -->
+      <div class="portrait">
+        <span class="mono-big" aria-hidden="true">ZI</span>
+        <img src="{{ url_for('static', filename='img/portrait.jpg') }}" alt="Portrait of Adv. Zafar Iqbal" onerror="this.remove()">
+      </div>
     </div>
+    <div class="prose reveal">
+      <span class="eyebrow">Background</span>
+      <h2>Finance and law, practised together</h2>
+      <div class="rule"></div>
+      <p>Adv. Zafar Iqbal is a Tax Consultant and Advocate based in Ranchi, Jharkhand, with over fifteen years of experience in Income Tax, GST and legal advisory work.</p>
+      <p>He holds a B.Com and an LLB from Chotanagpur Law College, combining a working knowledge of accounts with legal training to assist individuals and businesses across Jharkhand.</p>
+      <p>His practice is built on accuracy, clear communication and confidentiality.</p>
+      <div class="quals">
+        <span class="chip">B.Com</span><span class="chip">LLB</span><span class="chip">Chotanagpur Law College</span><span class="chip">15+ years</span>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Stats -->
-<section style="background: #f0f6ff; padding: 50px 20px; border-top: 1px solid #dce8f7; border-bottom: 1px solid #dce8f7;">
-    <div style="max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; text-align: center;">
-
-        <div style="flex: 1; min-width: 170px; padding: 25px 15px; background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
-            <div style="font-size: 2.2rem; font-weight: 700; color: #1e5ca8;">15+</div>
-            <div style="color: #666; font-size: 0.88rem; margin-top: 6px;">Years of Experience</div>
-        </div>
-
-        <div style="flex: 1; min-width: 170px; padding: 25px 15px; background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
-            <div style="font-size: 2.2rem; font-weight: 700; color: #1e5ca8;">500+</div>
-            <div style="color: #666; font-size: 0.88rem; margin-top: 6px;">Clients Served</div>
-        </div>
-
-        <div style="flex: 1; min-width: 170px; padding: 25px 15px; background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
-            <div style="font-size: 1.6rem; font-weight: 700; color: #1e5ca8;">B.Com</div>
-            <div style="color: #666; font-size: 0.88rem; margin-top: 6px;">Bachelor of Commerce</div>
-        </div>
-
-        <div style="flex: 1; min-width: 170px; padding: 25px 15px; background: white; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
-            <div style="font-size: 1.6rem; font-weight: 700; color: #1e5ca8;">LLB</div>
-            <div style="color: #666; font-size: 0.88rem; margin-top: 6px;">Bachelor of Laws</div>
-        </div>
-
+<section class="section alt">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Principles</span>
+      <h2>How the office works</h2>
+      <div class="rule"></div>
     </div>
+    <div class="grid">
+      <div class="card reveal"><h3>Experience</h3><p>Hands-on work in tax filing, GST compliance and legal advisory.</p></div>
+      <div class="card reveal"><h3>Individual attention</h3><p>Advice tailored to each client's circumstances.</p></div>
+      <div class="card reveal"><h3>Transparency</h3><p>Plain communication about the process and the fees.</p></div>
+      <div class="card reveal"><h3>Local practice</h3><p>Understanding of Jharkhand's offices, forums and business environment.</p></div>
+    </div>
+  </div>
 </section>
 
-<!-- Why Choose Us -->
-<section style="padding: 70px 20px; max-width: 1100px; margin: 0 auto;">
-    <div style="text-align: center; margin-bottom: 50px;">
-        <p style="color: #1e5ca8; font-weight: 600; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px;">Our Promise</p>
-        <h2 style="font-size: 2rem; color: #0a1f3c; font-weight: 700;">Why Choose Us?</h2>
+<section class="cta">
+  <div class="wrap reveal">
+    <h2>Contact the office</h2>
+    <p>Visit A/5 Iqra Complex, Main Road, Ranchi, or reach out by phone or message.</p>
+    <div class="actions">
+      <a class="btn btn-brass" href="{{ url_for('contact') }}">Contact</a>
+      <a class="btn btn-ghost" href="tel:+919835167520">Call</a>
     </div>
-
-    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-
-        <div style="flex: 1; min-width: 220px; background: #fff; border: 1px solid #e0eaf5; border-radius: 12px; padding: 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
-            <div style="font-size: 1.8rem; margin-bottom: 12px;">🎯</div>
-            <h3 style="color: #0a1f3c; font-size: 1rem; margin-bottom: 8px;">Experienced Professional</h3>
-            <p style="color: #666; font-size: 0.88rem; line-height: 1.8;">Over 15 years of hands-on experience in tax filing, GST compliance, and legal advisory.</p>
-        </div>
-
-        <div style="flex: 1; min-width: 220px; background: #fff; border: 1px solid #e0eaf5; border-radius: 12px; padding: 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
-            <div style="font-size: 1.8rem; margin-bottom: 12px;">🤝</div>
-            <h3 style="color: #0a1f3c; font-size: 1rem; margin-bottom: 8px;">Personalized Service</h3>
-            <p style="color: #666; font-size: 0.88rem; line-height: 1.8;">Every client receives individual attention — no generic advice, only tailored solutions.</p>
-        </div>
-
-        <div style="flex: 1; min-width: 220px; background: #fff; border: 1px solid #e0eaf5; border-radius: 12px; padding: 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
-            <div style="font-size: 1.8rem; margin-bottom: 12px;">🔒</div>
-            <h3 style="color: #0a1f3c; font-size: 1rem; margin-bottom: 8px;">Transparent & Trustworthy</h3>
-            <p style="color: #666; font-size: 0.88rem; line-height: 1.8;">Clear communication, honest fees, and complete confidentiality for all clients.</p>
-        </div>
-
-        <div style="flex: 1; min-width: 220px; background: #fff; border: 1px solid #e0eaf5; border-radius: 12px; padding: 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.05);">
-            <div style="font-size: 1.8rem; margin-bottom: 12px;">📍</div>
-            <h3 style="color: #0a1f3c; font-size: 1rem; margin-bottom: 8px;">Local Expert</h3>
-            <p style="color: #666; font-size: 0.88rem; line-height: 1.8;">Deep understanding of Jharkhand's local tax laws, courts, and business environment.</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- CTA -->
-<section style="background: linear-gradient(135deg, #0a1f3c, #1e5ca8); color: white; padding: 60px 20px; text-align: center;">
-    <div style="max-width: 600px; margin: 0 auto;">
-        <h2 style="font-size: 1.9rem; font-weight: 700; margin-bottom: 14px;">Ready to Work With Us?</h2>
-        <p style="opacity: 0.88; font-size: 1rem; line-height: 1.8; margin-bottom: 30px;">Get in touch today for a free initial consultation.</p>
-        <a href="/contact" style="background: white; color: #0a1f3c; padding: 14px 35px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem;">Contact Us →</a>
-    </div>
+  </div>
 </section>
 
 {% endblock %}

@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
 import os
+from datetime import datetime
 
 load_dotenv()
 
@@ -15,6 +16,10 @@ app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
 app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
 
 mail = Mail(app)
+
+@app.context_processor
+def inject_year():
+    return {'current_year': datetime.now().year}
 
 @app.route('/')
 def index():
@@ -34,14 +39,18 @@ def contact():
         name = request.form.get('name')
         email = request.form.get('email')
         phone = request.form.get('phone')
-        subject = request.form.get('subject')
+        subject = request.form.get('service') or 'General'
         message_body = request.form.get('message')
+
+        if request.form.get('website'):  # honeypot: bots fill hidden field
+            return redirect(url_for('contact'))
 
         try:
             msg = Message(
                 subject=f"New Enquiry: {subject}",
                 sender=os.getenv('MAIL_USERNAME'),
-                recipients=[os.getenv('RECIPIENT_EMAIL')]
+                recipients=[os.getenv('RECIPIENT_EMAIL')],
+                reply_to=email
             )
             msg.body = f"""
 You have received a new enquiry from your website.
